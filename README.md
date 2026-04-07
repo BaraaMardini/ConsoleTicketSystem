@@ -1,18 +1,90 @@
-This project is a Queue Management System built in C++ that simulates real-life service queues such as bill payments and subscription services. The system allows issuing tickets, tracking waiting clients, and serving customers in order.
+# 📌 Queue Management System (C++)
 
-The project is designed using Object-Oriented Programming principles. A main class (clsQueueLine) manages the queue, while an inner class (clsTicket) represents individual tickets with their details such as ticket number, issue time, waiting clients, and expected service time.
+## 📖 Overview
+This project is a **Queue Management System** built in C++ that simulates real-world service queues such as bill payment counters and subscription services.
 
-The system utilizes standard data structures:
+It allows issuing tickets, managing waiting clients, and serving them in an organized FIFO manner while calculating expected waiting times dynamically.
 
-Queue to manage clients in FIFO order.
-Stack to reverse ticket display when needed.
+---
 
-Key features include:
+## 🚀 Features
+- 🎟️ Issue tickets with timestamp
+- ⏳ Calculate expected service time
+- 👥 Track number of waiting clients
+- ✅ Serve next client and update queue
+- 🔄 Display tickets in multiple formats:
+  - Left to Right (LTR)
+  - Right to Left (RTL)
+- 📄 Print detailed ticket information
 
-Issuing tickets with timestamp.
-Calculating expected service time based on average serving duration.
-Serving clients and updating remaining waiting times.
-Displaying tickets in multiple formats (Left-to-Right and Right-to-Left).
-Printing detailed ticket information.
+---
 
-This project demonstrates strong understanding of data structures, OOP design, and practical problem-solving.
+## 🧱 Technologies & Concepts
+- **C++**
+- **Object-Oriented Programming (OOP)**
+- **Data Structures:**
+  - Queue (FIFO)
+  - Stack (for reverse display)
+- **Time & Date handling**
+
+---
+
+## 🏗️ System Design
+
+### 🔹 clsQueueLine
+Main class responsible for managing the queue:
+- Issue tickets
+- Serve clients
+- Track queue status
+
+### 🔹 clsTicket (Nested Class)
+Represents a single ticket:
+- Ticket number
+- Issue time
+- Waiting clients
+- Expected service time
+
+---
+
+## ⚙️ How It Works
+1. A queue is initialized with:
+   - Total tickets
+   - Average service time
+   - Prefix (e.g., A0, B0)
+
+2. Tickets are issued:
+   - Assigned sequential numbers
+   - Timestamp recorded
+   - Expected waiting time calculated
+
+3. When a client is served:
+   - The first ticket is removed
+   - Remaining tickets are updated
+
+4. Tickets can be displayed in different formats.
+
+---
+
+## ▶️ Example Use Case
+- Bill payment queue
+- Subscription service queue
+
+Each queue operates independently with its own configuration.
+
+---
+
+## 📊 What I Learned
+- Applying OOP principles in real scenarios
+- Working with queues and stacks
+- Managing time-based calculations
+- Designing modular and reusable code
+
+---
+
+## 📌 Future Improvements
+- Separate logic from UI (console output)
+- Optimize queue update when serving clients
+- Add GUI interface
+- Support multi-threaded queue simulation
+
+---
